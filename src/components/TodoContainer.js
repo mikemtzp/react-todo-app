@@ -1,4 +1,5 @@
 import React from "react";
+import '../App.css'
 import TodosList from "./TodosList";
 import Header from "./Header";
 import InputTodo from "./InputTodo";
@@ -61,7 +62,8 @@ class TodoContainer extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
+      <div className="inner">
         <Header />
         <InputTodo addTodoProps={this.addTodoItem} />
         <TodosList
@@ -69,6 +71,7 @@ class TodoContainer extends React.Component {
           toggleCheckboxProps={this.toggleCheckbox}
           deleteTodoProps={this.deleteTodo}
         />
+        </div>
       </div>
     );
   }
