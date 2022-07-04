@@ -10,6 +10,7 @@ class TodosList extends React.Component {
             key={todo.id}
             todo={todo}
             toggleCheckboxProps={this.props.toggleCheckboxProps}
+            deleteTodoProps={this.props.deleteTodoProps}
           />
         ))}
       </ul>

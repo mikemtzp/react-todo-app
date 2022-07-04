@@ -36,6 +36,16 @@ class TodoContainer extends React.Component {
     }));
   };
 
+  deleteTodo = (id) => {
+    this.setState({
+      todos: [
+        ...this.state.todos.filter((todo) => {
+          return todo.id !== id;
+        }),
+      ],
+    });
+  };
+
   render() {
     return (
       <div>
@@ -43,6 +53,7 @@ class TodoContainer extends React.Component {
         <TodosList
           todos={this.state.todos}
           toggleCheckboxProps={this.toggleCheckbox}
+          deleteTodoProps={this.deleteTodo}
         />
       </div>
     );
