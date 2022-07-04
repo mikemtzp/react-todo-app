@@ -11,6 +11,7 @@ class TodosList extends React.Component {
             todo={todo}
             toggleCheckboxProps={this.props.toggleCheckboxProps}
             deleteTodoProps={this.props.deleteTodoProps}
+            setUpdateProps={this.props.setUpdateProps}
           />
         ))}
       </ul>
