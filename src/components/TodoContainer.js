@@ -1,5 +1,5 @@
 import React from "react";
-import '../App.css'
+import "../App.css";
 import TodosList from "./TodosList";
 import Header from "./Header";
 import InputTodo from "./InputTodo";
@@ -60,17 +60,29 @@ class TodoContainer extends React.Component {
     });
   };
 
+  setUpdate = (updatedTitle, id) => {
+    this.setState({
+      todos: this.state.todos.map((todo) => {
+        if (todo.id === id) {
+          todo.title = updatedTitle;
+        }
+        return todo;
+      }),
+    });
+  };
+
   render() {
     return (
       <div className="container">
-      <div className="inner">
-        <Header />
-        <InputTodo addTodoProps={this.addTodoItem} />
-        <TodosList
-          todos={this.state.todos}
-          toggleCheckboxProps={this.toggleCheckbox}
-          deleteTodoProps={this.deleteTodo}
-        />
+        <div className="inner">
+          <Header />
+          <InputTodo addTodoProps={this.addTodoItem} />
+          <TodosList
+            todos={this.state.todos}
+            toggleCheckboxProps={this.toggleCheckbox}
+            deleteTodoProps={this.deleteTodo}
+            setUpdateProps={this.setUpdate}
+          />
         </div>
       </div>
     );
