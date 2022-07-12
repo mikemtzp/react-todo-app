@@ -1,5 +1,5 @@
 # React To-do app
-> This is a to do list in which you can enter tasks, change their status to completed and delete them. You can navigate between the to-do list, the about page and the authors information page. Built with React Js.
+> This is a to do list in which you can you can add, mark/unmark complete, edit, delete and persist todos items to local storage. You can navigate between the to-do list, the about page, and the authors information page. Built with React Js.
 
 ## 🛠️ Built With
 
